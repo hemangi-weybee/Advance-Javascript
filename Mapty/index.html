@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+
+    <title>mapty // Map your entries</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img src="logo.png" alt="Logo" class="logo" />
+
+      <ul class="entries">
+
+        <li class="controller"> 
+          <button class="btn__delete"> Delete Selected </button> 
+          <select class="sort__entries">
+            <option value="null" selected disabled>Sort</option>
+            <option value="1">Place (A-Z) </option>
+            <option value="2">Place (Z-A) </option>
+            <option value="3">Price (Ascending)</option>
+            <option value="4">Rating (Ascending)</option>
+          </select>
+        </li>
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="food">Food</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Place</label>
+            <input class="form__input form__input--place" placeholder="Place name" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Price</label>
+            <input class="form__input form__input--price" placeholder="Rs." />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Rating</label>
+            <input
+              class="form__input form__input--rating"
+              placeholder="Stars"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Items</label>
+            <input
+              class="form__input form__input--items"
+              placeholder="Count"
+              type="number"
+            />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label class="form__label">Comment</label>
+            <input
+              class="form__input form__input--message"
+              placeholder="Short Message"
+              type="text"
+              maxlength="20"
+            />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+
+        <div class="all__entries">
+
+        </div>
+        <!-- <li class="entry entry--food" data-id="1234567890">
+          <h2 class="entry__title">food on April 14</h2>
+          <div class="entry__details">
+            <span class="entry__icon">💸</span>
+            <span class="entry__value">5.2</span>
+            <span class="entry__unit">₨</span>
+          </div>
+          <div class="entry__details">
+            <span class="entry__icon">📦</span>
+            <span class="entry__value">24</span>
+            <span class="entry__unit">items</span>
+          </div>
+          <div class="entry__details">
+            <span class="entry__icon">📄</span>
+            <span class="entry__value">178</span>
+            <span class="entry__unit">₨</span>
+          </div>
+          <div class="entry__details">
+            <span class="entry__icon">⭐</span>
+            <span class="entry__value">4.6</span>
+            <span class="entry__unit"></span>
+          </div>
+        </li>
+
+        <li class="entry entry--other" data-id="1234567891">
+          <h2 class="entry__title">other on April 5</h2>
+          <div class="entry__details">
+            <span class="entry__icon">💸</span>
+            <span class="entry__value">27</span>
+            <span class="entry__unit">₨</span>
+          </div>
+          <div class="entry__details">
+            <span class="entry__icon">📄</span>
+            <span class="entry__value">95</span>
+            <span class="entry__unit">₨</span>
+          </div>
+          <div class="entry__details">
+            <span class="entry__icon">⭐</span>
+            <span class="entry__value">16</span>
+            <span class="entry__unit"></span>
+          </div>
+          <div class="entry__details">
+            <span class="entry__icon">📑</span>
+            <span class="entry__value">223</span>
+            <span class="entry__unit"></span>
+          </div>
+        </li> -->
+      </ul>
+
+      <!-- <p class="copyright">
+        &copy; Copyright by
+        <a
+          class="twitter-link"
+          target="_blank"
+          href="https://twitter.com/jonasschmedtman"
+          >Jonas Schmedtmann</a
+        >. Use for learning or your portfolio. Don't use to teach. Don't claim
+        as your own.
+      </p> -->
+    </div>
+
+    <div id="map"></div>
+
+    
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
