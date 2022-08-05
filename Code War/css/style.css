@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Mulish&family=Bungee&family=Courgette&family=Luckiest+Guy&family=Press+Start+2P&family=Russo+One&display=swap");
+:root {
+  --line-color: #9e4f60;
+}
+
+body {
+  background: url("../images/galaxy1.jpg");
+  background-size: cover;
+}
+body .hidden {
+  display: none;
+}
+
+.temp_page {
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.temp_page .hidden {
+  display: none;
+}
+.temp_page .logo img {
+  height: 500px;
+  width: 800px;
+}
+.temp_page .head {
+  margin: 20px 0px;
+  font-size: 45px;
+  color: white;
+  font-family: "Black Ops One", cursive;
+}
+
+.main_content .header {
+  border-bottom: 1px solid #e6e6e6;
+}
+.main_content .header .header_logo {
+  text-align: center;
+}
+.main_content .header .header_logo img {
+  filter: grayscale(100%);
+  height: 150px;
+}
+.main_content .error {
+  background-color: red;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  width: 99%;
+}
+.main_content .all_characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.main_content .all_characters .character_card {
+  margin: 10px;
+  background-color: var(--line-color);
+  border-radius: 15px;
+}
+.main_content .all_characters .character_card .character_img img {
+  border-radius: 10px 10px 0px 0px;
+  height: 310px;
+  width: 270px;
+}
+.main_content .all_characters .character_card .character_name {
+  font-family: "Mulish", sans-serif;
+  padding: 10px;
+  background: #202020;
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+  background-size: cover;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.main_content .all_characters .character_card .character_name:hover {
+  color: var(--line-color);
+}
+.main_content .all_characters .character_card:hover {
+  box-shadow: 0px 5px 15px 1px gray;
+}/*# sourceMappingURL=style.css.map */
