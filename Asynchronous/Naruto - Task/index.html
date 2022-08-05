@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Asynchronous JavaScript</title>
+
+</head>
+
+<body>
+    <h1 class="header"> Naruto </h1><hr>
+    <p class="error hidden"> </p>
+    <div class="box__Loading">
+        <span>|</span>
+        <span style="--delay: 0.1s">|</span>
+        <span style="--delay: 0.3s">|</span>
+        <span style="--delay: 0.4s">|</span>
+        <span style="--delay: 0.5s">|</span>
+    </div>
+    <main class="all__data">
+        <div class="clans hidden">
+            <h2> CLANS </h2>
+            <ul class="no__bullet all__clan">
+                <!-- <li data-clan="">Naruto Uzumaki</li> -->
+            </ul>
+        </div>
+
+        <section>
+            <div class="clan__loading box__Loading hidden">
+                <span>|</span>
+                <span style="--delay: 0.1s">|</span>
+                <span style="--delay: 0.3s">|</span>
+                <span style="--delay: 0.4s">|</span>
+                <span style="--delay: 0.5s">|</span>
+            </div>
+
+            <div class="clan clan__members hidden">
+                <h2> CLAN MEMBERS </h2>
+                <ul class="no__bullet all__clan__members">
+                    <!-- <li data-member="">Naruto Uzumaki</li> -->
+                </ul>
+            </div>
+
+            <div class="contain__members hidden">
+                <!-- <div class="clan member__detail"> 
+                    <h2 class="clan__member">  </h2>
+                    <div class="member_img">
+                        
+                    </div>
+                    <div class="details">
+                        <div class="one__line"> <h4> Appearance : </h4> <span> Naruto </span> </div>
+                        <div class="one__line"> <h4> Team : </h4> </div>
+                        <div class="one__line"> <h4> Nickname : </h4> </div>
+                        <div class="one__line"> <h4> Occupation: </h4> </div>
+                        <div class="family__member"> <h4 class="family__head"> Family : </h4>
+                            <div class="family__one__line" > <h4> Son : </h4> <span> Boruto </span> </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

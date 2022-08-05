@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat+Alternates&display=swap');
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 50px;
+    margin-block-end: 0;
+    margin-block-start: 15px;
+    background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(58,180,147,1) 70%, rgba(0,0,0,1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+hr {
+    border-top: 1px solid #b6b6b6;
+    margin-block-end: 0;
+}
+
+.error {
+    background-color: red;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    width: 99%;
+}
+
+.box__Loading {
+    .hidden {
+        display: none;
+    }
+
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    @keyframes arrows {
+
+        0%,
+        100% {
+            color: black;
+            transform: translateY(0);
+        }
+
+        50% {
+            color: #3AB493;
+            transform: translateY(20px);
+        }
+    }
+
+    span {
+        font-size: 35px;
+        font-weight: 900;
+        --delay: 0s;
+        animation: arrows 1s var(--delay) infinite ease-in;
+    }
+}
+
+main {
+
+    display: flex;
+
+    .clans {
+        width: 200px;
+        border-right: 1px solid #b6b6b6;
+
+        h2 {
+            padding-inline-start: 10px;
+        }
+
+        ul {
+            margin-right: 15px;
+            padding-inline-start: 10px;
+            padding-right: 40px;
+        }
+    }
+
+
+    .no__bullet {
+        list-style: none;
+
+        li {
+            font-size: 18px;
+            cursor: pointer;
+            padding: 5px;
+
+            &:hover {
+                font-weight: bolder;
+            }
+        }
+    }
+
+    section {
+        width: 100%;
+
+        .clan {
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .clan__members {
+            background-color: #c6ede2;
+            height: fit-content;
+            width: 98%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+        .contain__members {
+            .hidden {
+                display: none;
+            }
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            background-color: white;
+            width: 100%;
+
+            .member__detail {
+
+                background-color: #fbe0e9;
+
+                .member_img {
+                    img {
+                        height: 200px;
+                        width: 175px;
+                    }
+                }
+
+                .details {
+                    div {
+                        margin: 5px;
+                    }
+
+                    .one__line {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    .family__member {
+                        .family__head {
+                            margin-block-end: 0;
+                        }
+
+                        .family__one__line {
+                            display: flex;
+                            align-items: center;
+
+                            h4 {
+                                margin-block-start: 0;
+                                margin-block-end: 0;
+                            }
+
+                            span {
+                                margin-left: 15px;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0px 5px 15px 1px gray;
+                }
+            }
+        }
+    }
+
+
+}
+
+.hidden {
+    display: none;
+}
