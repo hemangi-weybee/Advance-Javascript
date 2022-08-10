@@ -40,7 +40,7 @@ const renderCharacterCard = async function (page) {
             const characterCardHtml = `
                         <div class="character_card" data-id = "${c.id}">
                             <div class="character_img"> ${c.img} </div> 
-                            <div class="character_name"> <h3> ${c.detail.name}</h3> </div>
+                            <div class="character_name"> <h4> ${c.detail.name}</h4> </div>
                         </div>`;
 
             characterContainer.insertAdjacentHTML('beforeend', characterCardHtml);
