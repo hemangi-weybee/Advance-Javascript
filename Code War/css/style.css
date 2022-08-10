@@ -8,7 +8,6 @@
 body {
   background: #262626;
   background-size: contain;
-  overflow: hidden;
 }
 body .hidden {
   display: none;
@@ -68,6 +67,8 @@ body .hidden {
   list-style-type: none;
   display: flex;
   align-items: center;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 .main_content .pages .pages_link span {
   padding-right: 10px;
