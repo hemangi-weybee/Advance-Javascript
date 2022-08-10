@@ -4,43 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Wars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>STAR WARS</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/loader.css">
+    <script src="https://kit.fontawesome.com/7629851435.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://www.svgrepo.com/show/87266/solar-system.svg">
 </head>
 
 <body>
     <main class="temp_page">
-        <div class="logo"><img src="./images/logo.png" alt="Star Wars"></div>
+        <div class="logo"><img src="./images/logoGolden.png" alt="Star Wars"></div>
         <div class="head"> A Character Guide </div>
 
-        <div id="loader">
+        <div class="loader">
             <div class="lightsaber ls-left ls-green"></div>
             <div class="lightsaber ls-right ls-red"></div>
         </div>
     </main>
 
     <main class="main_content hidden">
-        <header class="header"> 
-            <div class="header_logo"> <img src="https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png" alt="Star Wars"> </div>
+        <header class="header">
+            <div class="heading_line">
+                <!-- <div class="head"> A Character Guide </div> -->
+                <div class="header_logo">
+                    <img src="./images/logoBlack.png" alt="Star Wars">
+                </div>
+            </div>
         </header>
 
-        <section class="error hidden">
-
-        </section>
+        <section class="error hidden"> </section>
 
         <section class="all_characters">
             <!-- <div class="character_card">
-               <div class="character_img"></div> 
-               <div class="character_name"> <h3>Character Name</h3> </div>
+                <div class="character_img"><img src="https://starwars-visualguide.com/assets/img/characters/1.jpg">
+                </div>
+                <div class="character_name">
+                    <h2>Character Name</h2>
+                </div>
             </div> -->
         </section>
+
+        <div class="pages">
+            <ul class="pages_link">
+                <span>Pages</span>
+                <!-- <li class="nav_link"><a class="current" href="1">1</a></li>
+                <li class="nav_link"><a href="2">2</a></li> -->
+            </ul>
+        </div>
     </main>
+
+
+    <div class="modal hidden">
+
+        <div class="modal_loader">
+            <!-- <div class="loader_book book">
+                <figure class="page"></figure>
+                <figure class="page"></figure>
+                <figure class="page"></figure>
+            </div>
+
+            <h1> Getting Details </h1> -->
+            <img src="./images/bookLoader.gif" alt="" srcset="">
+        </div>
+
+        <div class="character_detail">
+            <div class="detail">
+                <div class="character_head">
+                    <h2> </h2>
+                    <button class="close_modal">&times;</button>
+                </div>
+
+                <div class="character_body">
+                    <!-- <div class="content"><i class="fa-solid fa-calendar-day"></i><span class="heading"> Birthyear : <span> </span> </span></div>
+                    <div class="content"><i class="fa-solid fa-user"></i><span class="heading"> Gender : <span> </span> </span></div>
+                    <div class="content"><i class="fa-solid fa-circle-question"></i><span class="heading"> Species : <span> </span> </span></div>
+                    <div class="content"><i class="fa-solid fa-globe"></i><span class="heading"> Homeworld : <span> </span> </span></div>
+                    <div class="content"><i class="fa-solid fa-clapperboard"></i><span class="heading"> Appearances : </span></div>
+                    <div class='movie'> </div> -->
+                </div>
+            </div>
+
+            <div class="character_detail_img">
+                <!-- <img src="https://starwars-visualguide.com/assets/img/characters/1.jpg"> -->
+            </div>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
 </body>
 
 </html>
-
-<!-- https://www.starwars.com/databank -->

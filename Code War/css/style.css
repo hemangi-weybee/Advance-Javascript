@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Mulish&family=Bungee&family=Courgette&family=Luckiest+Guy&family=Press+Start+2P&family=Russo+One&display=swap");
 :root {
   --line-color: #9e4f60;
+  --dark-line-color: #6b3641;
+  --light-line-color: #cb97a3;
 }
 
 body {
-  background: url("../images/galaxy1.jpg");
-  background-size: cover;
+  background: #262626;
+  background-size: contain;
 }
 body .hidden {
   display: none;
@@ -31,52 +33,223 @@ body .hidden {
   font-family: "Black Ops One", cursive;
 }
 
-.main_content .header {
-  border-bottom: 1px solid #e6e6e6;
+.main_content {
+  font-family: "Mulish", sans-serif;
 }
-.main_content .header .header_logo {
+.main_content .header .heading_line {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #b4b4b4;
+}
+.main_content .header .heading_line .head {
+  margin: 10px;
   text-align: center;
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
 }
-.main_content .header .header_logo img {
+.main_content .header .heading_line .header_logo {
+  text-align: center;
+  margin: 20px;
+}
+.main_content .header .heading_line .header_logo img {
   filter: grayscale(100%);
-  height: 150px;
+  width: 550px;
+  height: 45px;
+}
+.main_content .pages {
+  align-items: center;
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+}
+.main_content .pages .pages_link {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.main_content .pages .pages_link span {
+  padding-right: 10px;
+  color: black;
+}
+.main_content .pages .pages_link .nav_link {
+  padding: 0px 10px;
+  background-color: white;
+  margin: 10px;
+}
+.main_content .pages .pages_link .nav_link a {
+  text-decoration: none;
+  color: black;
+}
+.main_content .pages .pages_link .current {
+  background-color: var(--line-color);
+}
+.main_content .pages .pages_link .current a {
+  color: white;
 }
 .main_content .error {
-  background-color: red;
-  font-size: 20px;
-  padding: 5px;
+  margin: 10px auto;
+  background-color: var(--dark-line-color);
+  font-size: 22px;
+  padding: 10px;
   text-align: center;
   color: white;
   width: 99%;
+  letter-spacing: 2px;
 }
 .main_content .all_characters {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  transition: all 0.8s ease-in-out;
 }
 .main_content .all_characters .character_card {
-  margin: 10px;
-  background-color: var(--line-color);
+  margin: 25px 35px;
+  background-color: white;
   border-radius: 15px;
+  padding: 15px;
 }
 .main_content .all_characters .character_card .character_img img {
   border-radius: 10px 10px 0px 0px;
   height: 310px;
-  width: 270px;
+  width: 300px;
+  transition: all 0.5s ease-in-out;
 }
 .main_content .all_characters .character_card .character_name {
-  font-family: "Mulish", sans-serif;
-  padding: 10px;
-  background: #202020;
+  padding: 10px 10px 15px 10px;
   color: white;
   border-radius: 0px 0px 10px 10px;
-  background-size: cover;
   text-transform: uppercase;
   cursor: pointer;
+  background-color: #3a3a3a;
+  background-image: url("https://static-mh.content.disney.io/starwars/assets/shared/bg_hash_top-dca2c5ab1b2e.png");
+  background-size: 8px;
+  background-repeat: repeat-x;
+  letter-spacing: 2px;
 }
 .main_content .all_characters .character_card .character_name:hover {
-  color: var(--line-color);
+  text-decoration: underline;
 }
 .main_content .all_characters .character_card:hover {
-  box-shadow: 0px 5px 15px 1px gray;
+  box-shadow: 0px 25px 15px 1px gray;
+}
+.main_content .all_characters .character_card:hover .character_img img {
+  transform: translate(0px, -35px);
+  box-shadow: 15px 15px 15px gray;
+}
+
+.modal {
+  font-family: "Mulish", sans-serif;
+  width: 900px;
+  height: 590px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #c5c5c5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  justify-content: center;
+  display: flex;
+  transform: translate(-50%, -50%);
+}
+.modal .modal_loader img {
+  height: 590px;
+  width: 900px;
+  filter: brightness(2.67) grayscale(1);
+}
+.modal .character_detail {
+  padding: 20px;
+  display: flex;
+  color: #2e2e2e;
+  width: 100%;
+}
+.modal .character_detail .character_detail_img img {
+  width: 400px;
+  height: 550px;
+  border-right: 5px solid var(--line-color);
+}
+.modal .character_detail .detail {
+  margin-left: 15px;
+  padding-left: 10px;
+  width: 100%;
+}
+.modal .character_detail .detail .character_head {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 15px;
+  letter-spacing: 1.5px;
+}
+.modal .character_detail .detail .character_head h2 {
+  text-transform: uppercase;
+  -webkit-margin-before: 14px;
+          margin-block-start: 14px;
+  -webkit-margin-after: 14px;
+          margin-block-end: 14px;
+}
+.modal .character_detail .detail .character_head .close_modal {
+  font-size: 35px;
+  font-weight: bolder;
+  color: var(--line-color);
+  cursor: pointer;
+  border: none;
+  position: fixed;
+  top: -25px;
+  right: -13px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 100%;
+}
+.modal .character_detail .detail .character_head .close_modal:hover {
+  font-weight: bolder;
+}
+.modal .character_detail .detail .character_body {
+  font-size: 20px;
+  margin-right: 40px;
+}
+.modal .character_detail .detail .character_body .content {
+  margin: 5px auto;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+.modal .character_detail .detail .character_body .content i {
+  position: absolute;
+  padding: 10px;
+  color: var(--line-color);
+  background: white;
+  margin: 3px 15px 2px 0px;
+  font-size: 25px;
+}
+.modal .character_detail .detail .character_body .content .heading {
+  color: var(--line-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 8px 0px 8px 35px;
+  border-bottom: 5.5px solid white;
+  width: -webkit-fill-available;
+  padding: 7.8px 20px;
+}
+.modal .character_detail .detail .character_body .content .heading span {
+  color: #464646;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+.modal .character_detail .detail .character_body .movie {
+  margin-left: 55px;
+  border: none;
+  color: #464646;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: all 0.5s;
 }/*# sourceMappingURL=style.css.map */
