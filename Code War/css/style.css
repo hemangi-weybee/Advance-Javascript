@@ -8,6 +8,7 @@
 body {
   background: #262626;
   background-size: contain;
+  overflow: hidden;
 }
 body .hidden {
   display: none;
@@ -50,17 +51,17 @@ body .hidden {
 }
 .main_content .header .heading_line .header_logo {
   text-align: center;
-  margin: 20px;
+  margin: 15px;
 }
 .main_content .header .heading_line .header_logo img {
   filter: grayscale(100%);
-  width: 550px;
-  height: 45px;
+  width: 450px;
+  height: 35px;
 }
 .main_content .pages {
   align-items: center;
   display: flex;
-  font-size: 22px;
+  font-size: 20px;
   justify-content: center;
 }
 .main_content .pages .pages_link {
@@ -98,7 +99,7 @@ body .hidden {
   letter-spacing: 2px;
 }
 .main_content .all_characters {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -112,12 +113,12 @@ body .hidden {
 }
 .main_content .all_characters .character_card .character_img img {
   border-radius: 10px 10px 0px 0px;
-  height: 310px;
-  width: 300px;
+  height: 240px;
+  width: 250px;
   transition: all 0.5s ease-in-out;
 }
 .main_content .all_characters .character_card .character_name {
-  padding: 10px 10px 15px 10px;
+  padding: 10px 10px 8px 10px;
   color: white;
   border-radius: 0px 0px 10px 10px;
   text-transform: uppercase;
@@ -151,12 +152,13 @@ body .hidden {
   z-index: 1000;
   justify-content: center;
   display: flex;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 .modal .modal_loader img {
   height: 590px;
   width: 900px;
   filter: brightness(2.67) grayscale(1);
+  transform: scale(0.5);
 }
 .modal .character_detail {
   padding: 20px;
