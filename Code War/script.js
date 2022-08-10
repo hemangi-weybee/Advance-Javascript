@@ -33,7 +33,6 @@ const renderCharacterCard = async function (page) {
     currentPage = page - 1;
     characterContainer.innerHTML = '';
     const data = characterDataset.filter(c => c.page === page)
-    console.log(data)
     for (const c of data) {
         try {
             const img = await createImage(`https://starwars-visualguide.com/assets/img/characters/${c.id}.jpg`);
