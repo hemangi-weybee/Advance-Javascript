@@ -120,7 +120,7 @@ const createImage = function (imgPath) {
 const getJSON = async function (url) {
     errorContainer.classList.add('hidden');
     try {
-        const response = await fetch(url);
+        const response = await fetch(url,{mode: 'no-cors'});
         if (!response.ok) return null;
         const data = await response.json();
         return data;
