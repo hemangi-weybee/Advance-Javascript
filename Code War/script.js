@@ -148,6 +148,7 @@ const getFilms = async function (url) {
 const getCharacter = async function (url = 'https://swapi.dev/api/people/') {
     try {
         const data = await getJSON(url);
+        if(!data) throw Error('Data not found');
         let pageNo;
         if (data.next) pageNo = Number(data.next.slice(data.next.length - 1)) - 1;
         else pageNo = Number(data.previous.slice(data.previous.length - 1)) + 1;
@@ -158,17 +159,13 @@ const getCharacter = async function (url = 'https://swapi.dev/api/people/') {
         })
         renderPageNO(pageNo);
         if (pageNo === 4) {
-            pageNav.style.display = 'none';
-            document.querySelector('body').style.backgroundColor = '#c5c5c5';
             renderCharacterCard(1);
+            document.querySelector('body').style.backgroundColor = '#c5c5c5';
         }
         if (data.next) await getCharacter(data.next);
-        if (!data.next) {
-            pageNav.style.display = 'flex';
-            // document.querySelector('body').style.backgroundColor = '#c5c5c5';
-            // renderCharacterCard(1);
-        }
+        if (!data.next) pageNav.style.display = 'flex';
     } catch (err) {
+        document.querySelector('body').style.backgroundColor = '#c5c5c5';
         console.error(err);
         renderError();
     }

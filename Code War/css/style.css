@@ -65,7 +65,7 @@ body .hidden {
 }
 .main_content .pages .pages_link {
   list-style-type: none;
-  display: flex;
+  display: none;
   align-items: center;
   -webkit-margin-before: 0;
           margin-block-start: 0;
